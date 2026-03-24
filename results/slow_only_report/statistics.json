@@ -1,0 +1,34 @@
+{
+  "Slow Endpoint (200ms Delay)" : {
+    "transaction" : "Slow Endpoint (200ms Delay)",
+    "sampleCount" : 100,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 217.53999999999994,
+    "medianResTime" : 219.0,
+    "minResTime" : 204.0,
+    "maxResTime" : 247.0,
+    "pct1ResTime" : 220.0,
+    "pct2ResTime" : 221.0,
+    "pct3ResTime" : 246.73999999999987,
+    "throughput" : 9.52471663967997,
+    "receivedKBytesPerSec" : 1.9440095485284312,
+    "sentKBytesPerSec" : 1.7765828888465567
+  },
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 100,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 217.53999999999994,
+    "medianResTime" : 219.0,
+    "minResTime" : 204.0,
+    "maxResTime" : 247.0,
+    "pct1ResTime" : 220.0,
+    "pct2ResTime" : 221.0,
+    "pct3ResTime" : 246.73999999999987,
+    "throughput" : 9.52471663967997,
+    "receivedKBytesPerSec" : 1.9440095485284312,
+    "sentKBytesPerSec" : 1.7765828888465567
+  }
+}
