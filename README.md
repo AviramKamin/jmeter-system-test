@@ -12,19 +12,26 @@ The focus is not on performance tuning, but on:
 ---
 
 ## Project Structure
+
+
 jmeter-project/
+│
 ├── app/ # Flask API (system under test)
 │ └── app.py
+│
 ├── test-plan/ # JMeter test plan
 │ └── main_load_test.jmx
-├── results/ # Raw results and HTML report
+│
+├── results/ # Raw results and reports
 │ ├── mixed_workload_fixed.jtl
 │ ├── slow_only.jtl
 │ └── slow_only_report/
+│
 ├── docs/ # Analysis and notes
 │ └── jmeter_notes.md
+│
 ├── requirements.txt
-
+└── README.md
 
 ---
 
