@@ -1,5 +1,4 @@
-# JMeter Load Test - System Behavior Analysis
-
+# POC - System Behavior Under Load (Blocking Endpoint Analysis)
 ## Overview
 
 This project demonstrates system behavior under load using Apache JMeter and a simple Flask-based API.
@@ -35,6 +34,7 @@ jmeter-project/
 │
 ├── requirements.txt
 └── README.md
+
 
 ---
 
@@ -91,9 +91,12 @@ jmeter -g "C:\path\to\results\run.jtl" -o "C:\path\to\results\report"
 - Incorrect request formatting can lead to misleading results
 - System behavior must be analyzed across layers:
  - load tool → HTTP → backend → logs
- - Basic response validation was added using a JMeter Response Assertion on HTTP status code 200.
+
 
 ---
+## Validation
+
+Basic response validation was implemented using a JMeter Response Assertion to verify HTTP 200 responses.
 
 ## Example Insight
 
@@ -112,3 +115,12 @@ This demonstrates how synchronous blocking limits system capacity.
 - Debugging using backend logs (Flask)
 - Root cause analysis of failures
 - System-level thinking (not just tool usage)
+
+## Testing Approach
+
+Two main scenarios were tested:
+
+1. Mixed workload (multiple endpoints)
+2. Isolated slow endpoint
+
+This allowed comparison between overall system behavior and targeted bottleneck analysis.
