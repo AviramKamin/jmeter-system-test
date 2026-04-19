@@ -90,7 +90,8 @@ jmeter -g "C:\path\to\results\run.jtl" -o "C:\path\to\results\report"
 - Mixed workloads can hide performance bottlenecks
 - Incorrect request formatting can lead to misleading results
 - System behavior must be analyzed across layers:
-  - load tool → HTTP → backend → logs
+ - load tool → HTTP → backend → logs
+ - Basic response validation was added using a JMeter Response Assertion on HTTP status code 200.
 
 ---
 
