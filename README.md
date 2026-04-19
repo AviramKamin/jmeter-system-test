@@ -9,7 +9,10 @@ The focus is not on performance tuning, but on:
 - analyzing system behavior
 - understanding the impact of blocking operations
 
----
+## Purpose
+
+This project is a proof-of-concept (POC) designed to demonstrate how system behavior changes under load, especially when a blocking endpoint is introduced.
+It focuses on identifying bottlenecks, debugging failures, and understanding how throughput is affected by synchronous operations.
 
 ## Project Structure
 
@@ -47,6 +50,19 @@ A simple Flask API with the following endpoints:
 Example:
 /slow?delay_ms=200
 
+
+## How to Run
+
+### 1. Install dependencies
+
+pip install -r requirements.txt
+
+### 2. Run the Flask server
+
+py app/app.py
+
+Server will run at:
+http://127.0.0.1:5000
 
 ---
 
