@@ -1,14 +1,15 @@
-## How to Run
-
-### 1. Install dependencies
-
+How to Run
+1. Install dependencies
 pip install -r requirements.txt
+2. Run the backend service
+py services/api/app.py
 
-### 2. Run the Flask server
+Server runs at:
 
-py app/app.py
-
-Server will run at:
 http://127.0.0.1:5000
+3. Run JMeter test from CLI
+cd C:\jmeter\bin
+jmeter -n -t "C:\path\to\backend-system-validation-lab\jmeter\testplans\main_load_test.jmx" -l "C:\path\to\backend-system-validation-lab\jmeter\results\run.jtl"
 
-flask
+4. Generate HTML report
+jmeter -g "C:\path\to\backend-system-validation-lab\jmeter\results\run.jtl" -o "C:\path\to\backend-system-validation-lab

@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+
+venv/
+.env/
+
+.idea/
+.vscode/
+
+*.log
+
+Thumbs.db
+.DS_Store
+
+jmeter/results/report/
+jmeter/results/*.jtl
