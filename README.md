@@ -1,7 +1,6 @@
 # Backend System Validation Lab
-
-A focused backend/system validation lab for testing how service behavior changes under load, blocking operations, latency degradation, retries, timeouts, and recovery phases.
-
+A focused backend/system validation lab for testing how service behavior changes under load,
+ blocking operations, latency degradation, retries, timeouts, and recovery phases.
 This project evolved from a small JMeter PoC into a structured validation environment aimed at practical System QA / Backend QA work.
 
 ## Mission
@@ -13,26 +12,27 @@ The goal is to demonstrate practical backend/system validation skills.
 
 ## What This Project Demonstrates
 
-- Backend load validation
-- Blocking endpoint behavior
-- Latency degradation analysis
-- JMeter CLI execution
-- HTTP response validation
-- Backend log investigation
-- Reproducible test runs
-- System-level thinking beyond simple tool usage
+	- Backend load validation
+	- Retry amplification analysis
+	- Queue buildup investigation
+	- Recovery instability analysis
+	- Latency degradation behavior
+	- Backend observability reasoning
+	- JMeter CLI execution
+	- Backend log investigation
+	- Reproducible experiment design
+	- System-level validation methodology
 
 ## Current Scope
 
-Current version focuses on a Flask-based backend service tested with Apache JMeter.
+Current experiments investigate:
 
-Main validation scenario:
+	- Blocking latency behavior
+	- Timeout-driven retry amplification
+	- Queue buildup and delayed recovery
+	- Recovery instability under backlog pressure
 
-- Baseline API behavior
-- Mixed workload behavior
-- Isolated blocking endpoint behavior
-- Throughput and latency comparison
-- Error/request validation
+The project focuses on how backend systems transition between healthy, degraded, recovery, and stabilization states.
 
 ## Non-Goals
 
@@ -52,32 +52,69 @@ Scope is intentionally limited to backend/system validation for QA employability
 
 Current service endpoints:
 
-- `/health` - health check
-- `/products` - simulated product retrieval
-- `/checkout` - simulated checkout
-- `/slow?delay_ms=200` - artificial blocking endpoint
+	- `/health` - health check
+	- `/products` - simulated product retrieval
+	- `/checkout` - simulated checkout
+	- `/slow?delay_ms=200` - artificial blocking endpoint
+	- `/queue-status
+	- `/enqueue-work
+	- `/process-one
+	- `/api-with-dependency
 
 ## Project Structure
 
 ```text
 backend-system-validation-lab/
 
-├── services/
-│   └── api/                  # Backend API service
+├── experiments/
+│   ├── exp01_blocking_latency/
+│   │   ├── README.md
+│   │   └── notes.md
+│   │
+│   ├── exp02_retry_amplification/
+│   │   ├── README.md
+│   │   └── notes.md
+│   │
+│   ├── exp03_queue_buildup/
+│   │   ├── README.md
+│   │   └── notes.md
+│   │
+│   └── exp04_recovery_instability/
+│       ├── README.md
+│       └── notes.md
 │
 ├── jmeter/
 │   ├── testplans/            # JMeter .jmx files
-│   └── results/              # Raw .jtl files and HTML reports
+│   ├── results/              # Raw .jtl files
+│   └── reports/              # Generated HTML dashboards
 │
-├── experiments/
-│   └── exp01_blocking_latency/
+├── services/
+│   └── api/                  # Flask backend service
 │
-├── docs/
-│   ├── methodology/
-│   ├── scenarios/
-│   └── jmeter_notes.md
+├── screenshots/              # Experiment evidence
 │
-├── architecture/
+├── scripts/                  # Helper execution scripts
+│
 ├── requirements.txt
 ├── LICENSE
 └── README.md
+```
+
+
+## Behavioral Progression
+
+Healthy State
+    ↓
+Blocking Latency
+    ↓
+Dependency Degradation
+    ↓
+Retry Amplification
+    ↓
+Queue Buildup
+    ↓
+Delayed Recovery
+    ↓
+Recovery Instability
+    ↓
+Stabilization
